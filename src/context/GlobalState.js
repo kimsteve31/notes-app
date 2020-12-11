@@ -19,11 +19,19 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function deleteTodo(deleteId) {
+    dispatch({
+      type: 'DELETE_TODO',
+      payload: deleteId
+    });
+  }
+
   return (
     <GlobalContext.Provider 
       value={{ 
         listTodo:state.listTodo,
-        addTodo
+        addTodo,
+        deleteTodo
       }}> 
       {children} 
     </GlobalContext.Provider>);

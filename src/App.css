@@ -71,16 +71,31 @@ body {
   width: 300px;
   margin-top: 20px;
   list-style: none;
+  position: relative;
 }
 
+/*  List item */
 .item {
   background-color: #45a29e;
   height: 30px;
   margin-bottom: 15px;
   border-radius: 5px;
-  padding-left: 5px;
+  padding: 0 5px;
   font-size: 13px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
+}
+
+.delete-button {
+  cursor: pointer;
+  display: flex;
+  border: none;
+  outline: none;
+  background-color: transparent;
+}
+
+.delete-icon:hover {
+  color: red;
 }

@@ -5,6 +5,11 @@ export default (state, action) => {
         ...state,
         listTodo: [action.payload, ...state.listTodo]
       }
+    case 'DELETE_TODO':
+      return {
+        ...state,
+        listTodo: state.listTodo.filter(item => item.id !== action.payload)
+      }
     default: 
       return state;
   }
