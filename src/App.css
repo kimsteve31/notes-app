@@ -88,6 +88,10 @@ body {
   cursor: pointer;
 }
 
+.item.active {
+  background-color: #64e764;
+}
+
 .delete-button {
   cursor: pointer;
   display: flex;

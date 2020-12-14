@@ -18,7 +18,8 @@ export const NotesTodo = () => {
     const newTodo = {
       id: Math.floor(Math.random() * 100000),
       text,
-      completed: false
+      completed: false,
+      edit: false
     }
     
     addTodo(newTodo);

@@ -26,12 +26,20 @@ export const GlobalProvider = ({ children }) => {
     });
   }
 
+  function toggleTodo(todoId) {
+    dispatch({
+      type: 'TOGGLE_TODO',
+      payload: todoId
+    });
+  }
+
   return (
     <GlobalContext.Provider 
       value={{ 
         listTodo:state.listTodo,
         addTodo,
-        deleteTodo
+        deleteTodo,
+        toggleTodo
       }}> 
       {children} 
     </GlobalContext.Provider>);
