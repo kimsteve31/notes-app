@@ -16,8 +16,7 @@ export const NoteItem = ({ item }) => {
 
   const submitEdit = (eve) => {
     eve.preventDefault();
-
-    updateTodo(item.id, editText);
+    updateTodo(item.id, editText ? editText : item.text);
   };
 
   return (

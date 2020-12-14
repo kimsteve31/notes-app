@@ -22,13 +22,15 @@ export const NotesTodo = () => {
       edit: false,
     };
 
-    addTodo(newTodo);
+    if (newTodo.text) {
+      addTodo(newTodo);
+    }
     setText("");
   };
 
   return (
     <form className="notes-form" onSubmit={submitInput}>
-      <input type="text" placeholder="Add a Note..." className="note-input" value={text} onChange={handleInput} />
+      <input type="text" placeholder="Add a Note..." className="note-input" value={text} onChange={handleInput} required />
       <button className="notes-submit">
         <BsFillPlusSquareFill size={20} className="notes-icon" />
       </button>

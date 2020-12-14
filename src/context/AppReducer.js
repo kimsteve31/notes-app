@@ -20,7 +20,7 @@ const data = (state, action) => {
       };
     case "UPDATE_TODO":
       return {
-        listTodo: state.listTodo.map((todo) => (todo.id === action.payload[0] ? { ...todo, text: action.payload[1], edit: false } : todo)),
+        listTodo: state.listTodo.map((todo) => (todo.id === action.payload[0] ? { ...todo, text: action.payload[1], edit: false, completed: false } : todo)),
       };
     default:
       return state;
