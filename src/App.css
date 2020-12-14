@@ -68,7 +68,7 @@ body {
 
 /* Notes List */
 .list {
-  width: 300px;
+  width: 250px;
   margin-top: 20px;
   list-style: none;
   position: relative;
@@ -85,14 +85,29 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  cursor: pointer;
 }
 
 .item.active {
   background-color: #64e764;
 }
 
-.delete-button {
+.item-name {
+  text-align: left;
+  padding-top: 7px;
+  width: 75%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.icon-buttons {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 15%;
+}
+
+.button {
   cursor: pointer;
   display: flex;
   border: none;
@@ -102,4 +117,16 @@ body {
 
 .delete-icon:hover {
   color: red;
+}
+
+.edit-icon:hover {
+  color: blue;
+}
+
+.edit-input {
+  width: 85%;
+}
+
+.check-circle:hover {
+  color: #64e764;
 }
